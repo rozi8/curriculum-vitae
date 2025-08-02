@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detail Proyek | Portofolio Fahrur Rozi</title>
+  <meta name="description" content="Detail proyek portofolio Muhammad Fahrur Rozi dalam bidang DevOps dan pengembangan sistem.">
+  <meta name="author" content="Muhammad Fahrur Rozi" />
+  <meta name="keywords" content="DevOps, Portofolio, Backend, Docker, Terraform, Ubuntu Server" />
+  <meta property="og:title" content="Detail Proyek | Portofolio Fahrur Rozi" />
+  <meta property="og:description" content="Lihat detail proyek DevOps dan infrastruktur modern yang pernah dikerjakan oleh Fahrur Rozi." />
+  <meta property="og:image" content="public/images/profile.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/project.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="public/images/profile.jpg" type="image/jpeg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animasi Fade In -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+
+<body class="bg-slate-900 text-white font-sans">
+
+  <!-- Loader -->
+ <section class="bg-slate-900 text-white px-6 py-12 min-h-screen space-y-6 fade-in">
+  <div class="max-w-5xl mx-auto space-y-10">
+
+    <header class="text-center text-center">
+      <h1 class="text-4xl font-bold mb-2">🖧 Topologi Infrastruktur Jaringan </h1>
+      <p class="text-slate-400 text-lg">Penerapan VLAN, DHCP, OSPF, dan Hotspot menggunakan MikroTik Router</p>
+    </header>
+
+    <div class="rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+      <img src="/frontend/public/images/GNS3.png" alt="Topologi Jaringan Mikrotik VLAN OSPF DHCP Hotspot" class="w-full object-cover">
+    </div>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-semibold text-blue-400">📌 Ringkasan Konfigurasi</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-1">
+        <li>✅ DHCP Server: Aktif di MikroTik Server</li>
+        <li>✅ OSPF Routing: Terkonfigurasi antar MikroTik</li>
+        <li>✅ Hotspot: Berjalan di MikroTik Hotspot (dengan Firefox sebagai client)</li>
+        <li>✅ VLAN: Terbagi ke dalam VLAN 10 & VLAN 20</li>
+        <li>✅ Firewall: Tersedia di MikroTik Hotspot & MikroTik Lab</li>
+        <li>🔧 Fungsi routing dinamis dan statis aktif pada beberapa router</li>
+      </ul>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold text-blue-400">🌐 Zona Jaringan</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-slate-300">
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">🟦 Zona Biru - Lab</h3>
+          <ul class="list-disc list-inside">
+            <li>MikroTik Lab sebagai gateway</li>
+            <li>Switch dengan 3 client (Lab-1, Lab-2, Lab-3)</li>
+            <li>Terhubung ke MikroTik Junction → MikroTik Server</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">🟩 Zona Hijau - Server</h3>
+          <ul class="list-disc list-inside">
+            <li>MikroTik Server sebagai DHCP utama</li>
+            <li>OSPF aktif untuk routing ke semua MikroTik</li>
+            <li>Hotspot tersedia pada MikroTik Hotspot</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">🟨 Zona Kuning - VLAN & Guru</h3>
+          <ul class="list-disc list-inside">
+            <li>MikroTik Ruangan terhubung ke VLAN 10 & VLAN 20</li>
+            <li>Switch ke PC Guru (VLAN 10)</li>
+            <li>Switch ke Switch 2 (VLAN 20)</li>
+            <li>Trunk port antar Switch</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-2">
+      <h2 class="text-2xl font-semibold text-blue-400">🔧 Fitur Implementasi</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-1">
+        <li>🔁 Dynamic Routing dengan OSPF</li>
+        <li>🛡️ Firewall di MikroTik Hotspot & Lab</li>
+        <li>📶 Hotspot aktif dengan login captive portal</li>
+        <li>🌐 VLAN tagging dan trunk antar switch</li>
+        <li>📦 DHCP Server dan Client antar subnet</li>
+      </ul>
+    </section>
+
+    <footer class="text-center text-sm text-slate-500 pt-12 border-t border-slate-700 mt-12">
+      © 2025 Muhammad Fahrur Rozi. All rights reserved.
+    </footer>
+  </div>
+</section>
+
+
+  <!-- JS Loader -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+  </script>
+</body>
+</html>

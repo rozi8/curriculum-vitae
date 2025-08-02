@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Detail Proyek | Portofolio Fahrur Rozi</title>
+  <meta name="description" content="Detail proyek portofolio Muhammad Fahrur Rozi dalam bidang DevOps dan pengembangan sistem.">
+  <meta name="author" content="Muhammad Fahrur Rozi" />
+  <meta name="keywords" content="DevOps, Portofolio, Backend, Docker, Terraform, Ubuntu Server" />
+  <meta property="og:title" content="Detail Proyek | Portofolio Fahrur Rozi" />
+  <meta property="og:description" content="Lihat detail proyek DevOps dan infrastruktur modern yang pernah dikerjakan oleh Fahrur Rozi." />
+  <meta property="og:image" content="public/images/profile.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/project.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="public/images/profile.jpg" type="image/jpeg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animasi Fade In -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+  <!-- Loader -->
+ <section class="bg-slate-900 text-white px-6 py-12 min-h-screen space-y-6 fade-in">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <header class="text-center">
+      <h1 class="text-4xl font-bold mb-2">🚀 Tutorial: Deploy Nginx & Redis secara Otomatis dengan Terraform dan Docker</h1>
+      <p class="text-slate-400">Mini proyek pembelajaran DevOps menggunakan pendekatan Infrastructure as Code</p>
+    </header>
+
+    <section>
+      <p>
+        Halo, DevOps enthusiast! 👋 <br />
+        Pada artikel kali ini, saya akan membagikan sebuah mini-proyek pembelajaran yang saya kerjakan untuk mendalami automasi infrastruktur menggunakan
+        <strong>Terraform</strong> dengan <strong>Docker provider</strong>. Tujuannya adalah melakukan deployment container <strong>Nginx</strong> dan
+        <strong>Redis</strong> secara otomatis, dengan pendekatan yang <strong>modular</strong>, <strong>bersih</strong>, dan <strong>mudah untuk dikembangkan</strong>.
+      </p>
+      <p class="mt-2">Proyek ini cocok untuk kamu yang sedang belajar Infrastructure as Code (IaC) dan ingin memahami bagaimana mengelola layanan kontainer dengan pendekatan yang lebih terstruktur.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">🔧 Apa yang Akan Kamu Dapatkan?</h2>
+      <ul class="list-disc list-inside space-y-1 text-slate-300">
+        <li>✅ <strong>Deployment otomatis</strong> untuk container Nginx dan Redis menggunakan Terraform.</li>
+        <li>🧱 <strong>Struktur modular</strong>, sehingga setiap layanan dikelola dalam modul terpisah.</li>
+        <li>⚙️ <strong>Variabel input</strong> terpisah menggunakan <code>terraform.tfvars</code>, agar mudah disesuaikan.</li>
+        <li>📤 <strong>Menampilkan output penting</strong> setelah provisioning selesai.</li>
+        <li>🗂️ <strong>Struktur direktori rapi</strong> dan mudah dipahami, memudahkan kolaborasi maupun pemeliharaan.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">📁 Struktur Direktori</h2>
+      <pre class="bg-slate-800 text-sm p-4 rounded-lg overflow-x-auto">
+.
+├── main.tf
+├── outputs.tf
+├── terraform.tfvars
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── variable.tf
+├── README.md
+└── modules/
+    └── redis/
+        ├── main.tf
+        ├── output.tf
+        ├── terraform.tfvars
+        └── variables.tf
+      </pre>
+      <p class="text-slate-300 mt-2">Setiap layanan (seperti Redis) berada dalam direktori <code>modules/</code> agar mudah digunakan kembali di proyek lain.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">🚀 Langkah-langkah Penggunaan</h2>
+      <ol class="list-decimal list-inside space-y-4 text-slate-300">
+        <li>
+          <strong>Clone repository</strong>
+          <pre class="bg-slate-800 text-sm p-3 rounded-lg mt-2 overflow-x-auto">git clone https://github.com/rozi8/infra-nginx-redis-modular
+cd infra-nginx-redis-modular</pre>
+        </li>
+        <li>
+          <strong>Duplikat file variabel contoh</strong>
+          <pre class="bg-slate-800 text-sm p-3 rounded-lg mt-2 overflow-x-auto">cp terraform.tfvars.example terraform.tfvars</pre>
+          <p>Edit <code>terraform.tfvars</code> sesuai kebutuhan kamu, seperti port dan konfigurasi lainnya.</p>
+        </li>
+        <li>
+          <strong>Jalankan perintah Terraform</strong>
+          <pre class="bg-slate-800 text-sm p-3 rounded-lg mt-2 overflow-x-auto">terraform init
+terraform plan
+terraform apply
+terraform output</pre>
+        </li>
+        <li>
+          <strong>Akses Nginx melalui browser:</strong>
+          <pre class="bg-slate-800 text-sm p-3 rounded-lg mt-2 overflow-x-auto">http://localhost:8087</pre>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">📌 Catatan Tambahan</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-1">
+        <li>Pastikan Docker sudah terinstall dan berjalan di sistem kamu.</li>
+        <li>Project ini menggunakan Docker provider dari Terraform, jadi kamu tidak memerlukan Docker Compose.</li>
+        <li>Kamu bisa menambahkan modul lain seperti PostgreSQL, MongoDB, atau aplikasi lain dengan struktur modular serupa.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">👨‍💻 Tentang Penulis</h2>
+      <p class="text-slate-300">
+        Halo! Saya <strong>Muhammad Fahrur Rozi</strong>, mahasiswa Informatika yang sedang mendalami dunia <strong>DevOps</strong> dan
+        <strong>Infrastructure as Code</strong>. Proyek ini adalah bagian dari proses belajar harian saya dalam membangun sistem otomatis dan scalable.
+      </p>
+      <p class="mt-2">Jika kamu punya feedback, saran, atau ingin berdiskusi seputar proyek ini, silakan kunjungi GitHub saya:</p>
+      <a href="https://github.com/rozi8/infra-nginx-redis-modular" target="_blank" class="text-blue-400 hover:underline">📍 github.com/rozi8</a>
+    </section>
+
+    <footer class="text-center text-sm text-slate-500 pt-12 border-t border-slate-700 mt-12">
+      © 2025 Muhammad Fahrur Rozi. All rights reserved.
+    </footer>
+  </div>
+</section>
+
+  <!-- JS Loader -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+  </script>
+</body>
+</html>

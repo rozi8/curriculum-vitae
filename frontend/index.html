@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio | Fahrur Rozi</title>
+
+<!-- Meta Description -->
+<meta name="description" content="Detail proyek pengembangan website static menggunakan Nginx dan Docker. Bagian dari portofolio Muhammad Fahrur Rozi dalam bidang DevOps dan Infrastructure as Code.">
+
+<!-- Keywords -->
+<meta name="keywords" content="Fahrur Rozi, DevOps, Docker, Nginx, Ubuntu Server, Portofolio, Infrastructure as Code, Terraform, CI/CD, GitHub Actions">
+
+<!-- Author -->
+<meta name="author" content="Muhammad Fahrur Rozi" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://yourdomain.com/project.html" />
+
+<!-- Open Graph (OG) Tags -->
+<meta property="og:title" content="Website Static + Nginx + Docker | Portofolio Fahrur Rozi" />
+<meta property="og:description" content="Detail proyek DevOps: Website Static, Nginx, dan Docker. Dibangun dengan pendekatan modular, otomatis, dan efisien." />
+<meta property="og:image" content="https://yourdomain.com/public/images/project.png" />
+<meta property="og:url" content="https://yourdomain.com/project.html" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card -->
+<!-- <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Website Static + Nginx + Docker | Portofolio Fahrur Rozi" />
+<meta name="twitter:description" content="Proyek DevOps modern oleh Fahrur Rozi menggunakan Nginx, Docker, dan GitHub Actions." />
+<meta name="twitter:image" content="https://yourdomain.com/public/images/project.png" />
+<meta name="twitter:creator" content="@rozi_fahrur" /> -->
+
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Portfolio",
+  "name": "Website Static + Nginx + Docker",
+  "description": "Proyek portofolio yang menampilkan deployment website statis menggunakan Nginx, Docker, dan Infrastructure as Code.",
+  "url": "https://yourdomain.com/project.html",
+  "image": "https://yourdomain.com/public/images/project.png",
+  "creator": {
+    "@type": "Person",
+    "name": "Muhammad Fahrur Rozi",
+    "url": "https://yourdomain.com"
+  },
+  "keywords": [
+    "Docker", "Nginx", "DevOps", "CI/CD", "Terraform", "Infrastructure as Code", "Ubuntu Server"
+  ],
+  "datePublished": "2025-07-19"
+}
+</script>
+
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+  <!-- AOS CSS -->
+<!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" 
+rel="stylesheet"> -->
+
+<!-- AOS Animation CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/profile.jpg">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+
+<!-- Body -->
+<body class="bg-gradient-to-b from-sky-100 via-white to-gray-100 text-gray-800">
+
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Brand -->
+    <div class="text-xl font-bold text-gray-800">
+      Muhammad Fahrur Rozi
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+      <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+      <a href="#hobby" class="hover:text-blue-600 transition">Hobi</a>
+      <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+      <a href="#career" class="hover:text-blue-600 transition">Karier</a>
+      <a href="#projects" class="hover:text-blue-600 transition">Portofolio</a>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <button id="nav-toggle" class="md:hidden focus:outline-none">
+      <!-- Open Icon -->
+      <svg id="menu-icon" class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close Icon (hidden by default) -->
+      <svg id="close-icon" class="w-6 h-6 text-gray-800 hidden" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="nav-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-gray-700">
+    <a href="#about" class="block hover:text-blue-600">Tentang</a>
+    <a href="#hobby" class="block hover:text-blue-600">Hobi</a>
+    <a href="#skills" class="block hover:text-blue-600">Skil</a>
+    <a href="#career" class="block hover:text-blue-600">Karier</a>
+    <a href="#projects" class="block hover:text-blue-600">Portofolio</a>
+  </div>
+</nav>
+
+    <!-- Menu Items -->
+    <div id="nav-menu"
+      class="absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:flex hidden md:flex-row flex-col md:space-x-6 md:items-center transition-all duration-300 ease-in-out">
+      <a href="#about" class="px-4 py-2 hover:text-blue-600 text-center">Tentang</a>
+      <a href="#hobby" class="px-4 py-2 hover:text-blue-600 text-center">Hobi</a>
+      <a href="#career" class="px-4 py-2 hover:text-blue-600 text-center">Karier</a>
+      <a href="#projects" class="px-4 py-2 hover:text-blue-600 text-center">Portofolio</a>
+    </div>
+  </div>
+</nav>
+
+<!-- hero -->
+  <section id="hero" class="bg-gradient-to-b from-blue-200 via-blue-50 to-white py-20">
+  <div class="flex flex-col items-center justify-center">
+    <img src="/frontend/public/images/PP-FB.jpg"
+      class="rounded-full w-48 h-48 border-4 border-white shadow-xl ring-4 ring-sky-300 mb-6"
+      alt="Foto Profil Muhammad Fahrur Rozi" />
+
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
+      Halo, saya Muhammad Fahrur Rozi
+    </h1>
+    <p class="text-lg text-gray-600 mb-4">
+      Mahasiswa Informatika | Pembelajar <span class="text-blue-600 font-medium">DevOps & Backend</span>
+    </p>
+
+    <!-- LinkEdin -->
+    <div class="flex gap-4 mt-4 flex-wrap justify-center">
+      <a href="https://www.linkedin.com/in/muhammad-fahrur-rozi-7b748b263/" target="_blank"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md flex items-center gap-2 transition-transform duration-500 hover:scale-105">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+
+      <!--GitHub  -->
+      <a href="https://github.com/rozi8" target="_blank"
+        class="bg-gray-800 hover:bg-black text-white px-4 py-2 rounded-full shadow-md flex items-center gap-2 transition-transform duration-500 hover:scale-105">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+
+      <!-- Docker -->
+      <a href="https://hub.docker.com/u/rozi12" target="_blank"
+        class="bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-full shadow-md flex items-center gap-2 transition-transform duration-500 hover:scale-105">
+        <i class="fab fa-docker"></i> DockerHub
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Tentang Saya -->
+  <section id="about" class="bg-gradient-to-b from-slate-100 to-white py-16 px-4">
+  <div class="max-w-3xl mx-auto fade-in-scroll opacity-0 translate-y-10 transition duration-1000">
+    <h3 class="text-3xl font-bold mb-6 text-center text-slate-800">Tentang Saya</h3>
+    <p class="text-justify text-slate-700 leading-relaxed">
+        Saya adalah mahasiswa Informatika di UPN “Veteran” Jawa Timur dengan minat utama pada DevOps Engineering, backend development, virtualisasi server, dan otomatisasi sistem berbasis Linux. Saya aktif membangun sistem deployment efisien di lingkungan Ubuntu Server menggunakan Docker, serta mempelajari penerapan cloud computing dan CI/CD pipeline.
+    </p>
+    <p class="text-justify mt-4 text-slate-700 leading-relaxed">
+        Sebagai bentuk pengembangan diri, saya pernah mengikuti Program Kreativitas Mahasiswa (PKM-KC dan PKM-RI), kompetisi esai tingkat nasional, serta perlombaan desain dan teknologi kapal seperti KKI dan NASDARC ITS. Saat ini, saya juga tergabung dalam tim Robotika UPN “Veteran” Jawa Timur (Vikasthira), divisi Electric Remote Control (ERC), untuk terus memperdalam kemampuan teknis dan kolaboratif di dunia engineering.
+    </p>
+  </div>
+</section>
+
+
+ <!-- Hobi -->
+<section id="hobby" class="bg-gradient-to-b from-slate-800 to-slate-900 py-16 px-6">
+  <div class="fade-in-scroll opacity-0 translate-y-10 transition duration-700">
+    <h3 class="text-3xl font-bold mb-16 text-center text-white">Hobi dan Passion</h3>
+
+    <div class="space-y-12 max-w-6xl mx-auto">
+      
+      <!-- Gunung -->
+      <div class="fade-in-scroll opacity-0 translate-x-10 transition duration-1000">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500">
+        <img src="/frontend/public/images/gunung.png" alt="Eksperimen Server" class="w-44 h-44 object-cover rounded-xl shadow-md hover:scale-105 transition duration-500" />
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-800 mb-2">Pecinta Alam dan Mendaki</h4>
+            <p class="text-slate-600">
+              Saya sangat mencintai alam dan memiliki hobi mendaki gunung. Aktivitas ini mengajarkan saya tentang ketekunan, manajemen risiko, dan pentingnya menjaga lingkungan. Setiap pendakian adalah pengalaman yang memperkaya jiwa dan melatih fisik.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buku -->
+      <div class="fade-in-scroll opacity-0 -translate-x-10 transition duration-1000">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500">
+          <img src="/frontend/public/images/GMNI.jpg" alt="Eksperimen Server" class="w-44 h-44 object-cover rounded-xl shadow-md hover:scale-105 transition duration-500" />
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-800 mb-2">Membaca & Diskusi Buku</h4>
+            <p class="text-slate-600">
+              Saya gemar membaca dan berdiskusi tentang berbagai topik, mulai dari sejarah, politik, sosial, filsafat, hingga ilmu pengetahuan. Selain itu, saya juga mengoleksi buku-buku yang berkaitan dengan jurusan saya. Membaca memperluas wawasan saya, sedangkan diskusi membantu saya memahami sudut pandang yang berbeda.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Server -->
+      <div class="fade-in-scroll opacity-0 translate-x-10 transition duration-1000">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500">
+          <img src="/frontend/public/images/server.png" alt="Eksperimen Server" class="w-44 h-44 object-cover rounded-xl shadow-md hover:scale-105 transition duration-500" />
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-800 mb-2">Eksperimen Server</h4>
+            <p class="text-slate-600">
+              Saya berantusias dalam merancang dan mengelola sistem berbasis Linux, memanfaatkan Docker untuk virtualisasi, serta menerapkan otomatisasi deployment di Ubuntu Server sebagai langkah konkret dalam memperdalam pemahaman dan praktik DevOps.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Robotika -->
+      <div class="fade-in-scroll opacity-0 -translate-x-10 transition duration-1000">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500">
+          <img src="/frontend/public/images/radar.jpg" alt="Kontestasi Kapal" class="w-44 h-44 object-cover rounded-xl shadow-md hover:scale-105 transition duration-500" />
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-800 mb-2">Kontestasi Kapal</h4>
+            <p class="text-slate-600">
+              Saya aktif di lomba robotika, khususnya divisi Electric Remote Control (ERC), yang menantang saya untuk mengintegrasikan perangkat lunak, kontrol, dan sistem elektronik. Tim kami juga pernah mengikuti beberapa perlombaan kapal bergengsi beberapa diantaranya yaitu NADRAC ITS dan Kontestasi Kapal Indonesia (KKI).
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills dan Tools -->
+<section id="skills" class="bg-[#0f172a] py-16 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-6" data-aos="fade-up">Skills</h2>
+    <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Berikut adalah kumpulan tools, bahasa pemrograman, dan teknologi yang saya gunakan dalam pengembangan website, infrastruktur, dan proyek lainnya.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <!-- Frontend -->
+      <div class="bg-[#1e293b] p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+  <h3 class="text-white text-xl font-semibold mb-4 text-center">Frontend</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-html5"></i> HTML
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-css3-alt"></i> CSS
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-js"></i> JavaScript
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-react"></i> React
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-wind"></i> Tailwind CSS
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-bootstrap"></i> Bootstrap
+    </span>
+  </div>
+</div>
+
+
+      <!-- Backend -->
+<div class="bg-[#1e293b] p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+  <h3 class="text-2xl font-semibold mb-4 text-center">Backend</h3>
+  <div class="flex flex-wrap gap-3 justify-center">
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fab fa-node-js"></i> Node.js
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-code"></i> Express.js
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-database"></i> MySQL
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-recycle"></i> Redis
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-flask"></i> Postman
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-file-code"></i> PHP Native
+    </span>
+  </div>
+</div>
+
+
+     <!-- DevOps & Infra -->
+<div class="bg-[#1e293b] p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+  <h3 class="text-2xl font-semibold mb-4 text-center">DevOps & Infra</h3>
+  <div class="flex flex-wrap gap-3 justify-center">
+
+    <!-- Version Control & CI/CD -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fab fa-git-alt"></i> Git</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fab fa-github"></i> GitHub</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-bolt"></i> GitHub Actions</span>
+
+    <!-- Container & IaC -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fab fa-docker"></i> Docker</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fab fa-docker"></i> DockerHub</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-code"></i> Terraform</span>
+
+    <!-- Server & Virtualization -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fab fa-ubuntu"></i> Ubuntu Server</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-desktop"></i> VMware</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-laptop-code"></i> VirtualBox</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-project-diagram"></i> GNS3 VM</span>
+
+    <!-- Networking & Tools -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-network-wired"></i> Winbox</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-terminal"></i> PuTTY</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-route"></i> Mikrotik</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-wifi"></i> Access Point</span>
+
+    <!-- Web Server & Network Services -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-server"></i> Nginx</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-exchange-alt"></i> Nginx Reverse Proxy</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-sitemap"></i> Load Balancer</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-random"></i> Routing</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-shield-alt"></i> Firewall</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-network-wired"></i> VLAN</span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1"><i class="fas fa-lock"></i> Open VPN</span>
+  </div>
+</div>
+
+      <!-- Engineering Tools -->
+    <div class="bg-[#1e293b] p-6 rounded-2xl shadow-lg" data-aos="fade-up" data-aos-delay="500"> 
+  <h3 class="text-2xl font-semibold mb-4 text-center">Engineering Tools</h3>
+  <div class="flex flex-wrap gap-3 justify-center">
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-ship"></i> Maxsurf
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-drafting-compass"></i> AutoCAD
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-cube"></i> SketchUp
+    </span>
+    <!-- Tambahan baru -->
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-database"></i> PowerDesigner
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-diagram-project"></i> Draw.io
+    </span>
+    <span class="px-3 py-1 rounded-full bg-[#334155] text-sm text-white shadow-md hover:bg-[#475569] transition-all duration-300 flex items-center gap-1">
+      <i class="fas fa-project-diagram"></i> Flowgorithm
+    </span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Karier -->
+ <section id="career" class="bg-slate-100 py-12 text-slate-800">
+  <h2 class="text-xl font-bold text-center mb-4">Tujuan Karier</h2>
+  <p class="text-center max-w-2xl mx-auto">
+    Saya ingin menjadi DevOps Engineer yang menguasai deployment otomatis, manajemen infrastruktur, CI/CD, dan arsitektur microservices.
+  </p>
+</section>
+
+<!-- Portofolio -->
+<section id="projects" class="bg-slate-100 py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">Portofolio Pembelajaran</h3>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project Card 1 -->
+      <div class="fade-in-scroll opacity-0 translate-y-10 transition duration-1000">
+        <a href="/frontend/project1.html" class="flex flex-col h-full group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+          <div class="mb-4">
+            <img src="/frontend/public/images/porto-1.png" alt="Project Infrastruktur DevOps"
+              class="rounded-lg shadow-md w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition">
+            Website Static + Nginx + Docker
+          </h4>
+          <p class="text-sm text-gray-600 mt-auto">
+            Deploy website ke Ubuntu Server menggunakan Docker dan Nginx untuk efisiensi dan portabilitas.
+          </p>
+        </a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="fade-in-scroll opacity-0 -translate-y-10 transition duration-1000">
+        <a href="/frontend/project2.html" class="flex flex-col h-full group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+          <div class="mb-4">
+            <img src="/frontend/public/images/GNS3.png" alt="Topologi GNS3" 
+              class="rounded-md w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition">
+            Topologi GNS3 MikroTik
+          </h4>
+          <p class="text-sm text-gray-600 mt-auto">
+            Simulasi jaringan dengan Routing Dinamis, VLAN, Hotspot, Firewall, dan QoS berbasis MikroTik.
+          </p>
+        </a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="fade-in-scroll opacity-0 translate-y-10 transition duration-1000">
+        <a href="project3.html" class="flex flex-col h-full group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+          <div class="mb-4">
+            <img src="public/images/radar.jpg" alt="Desain Kapal 3D"
+              class="rounded-md w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition">
+            Desain Kapal 3D - Maxsurf, AutoCAD, SketchUp
+          </h4>
+          <p class="text-sm text-gray-600 mt-auto">
+            Pemodelan kapal 3D dengan dimensi akurat menggunakan software rekayasa kelautan dan pemodelan arsitektur.
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-[#e9ecf8] text-gray-700 pt-12 pb-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Konten Atas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Logo dan Moto -->
+      <div class="md:col-span-2">
+        <img src="/frontend/public/images/PP-FB.jpg" alt="Logo" class="h-12 mb-4" />
+        <p class="text-sm text-gray-600">
+          "Setiap sistem hebat dibangun dari proses panjang dan kegigihan. Perjalanan DevOps saya baru dimulai."
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="https://www.linkedin.com/in/muhammad-fahrur-rozi-7b748b263/" class="text-gray-600 hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/_fahrurrozi12/" class="text-gray-600 hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/?locale=id_ID" class="text-gray-600 hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/6285879251868" class="text-gray-600 hover:text-blue-500"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Kontak -->
+      <div>
+        <h4 class="font-semibold mb-2">Contact</h4>
+        <ul class="space-y-1 text-sm">
+          <li>Hubungi Saya</li>
+          <li><span class="font-semibold">Telepon:</span><br />+62 858-7925-1868 (Fahrur Rozi)</li>
+          <li class="mt-2">
+            <span class="font-semibold">Email:</span><br />
+            <a href="mailto:https://rozi83289@gmail.com" class="text-blue-600 hover:underline">rozi83289@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Garis & Copyright -->
+    <div class="text-center text-xs text-gray-500 border-t pt-4">
+      &copy; 2025 Fahrur Rozi. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Script js -->
+  <script src="/frontend/public/js/main.js"></script>
+
+<!-- Feather icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+<!-- AOS js -->
+ <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- <script>
+  AOS.init({
+    duration: 1000, // durasi animasi dalam ms
+    once: false,     // animasi hanya sekali saat scroll 
+  });
+</script> -->
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
