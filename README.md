@@ -18,28 +18,48 @@ Halo! Ini adalah proyek website portofolio pribadi saya, **Muhammad Fahrur Rozi*
 
 ## 📁 Struktur Direktori
 .
-├── docker-compose.yml
-├── Dockerfile
-├── frontend
-│   ├── index.html
-│   ├── package-lock.json
-│   ├── project1.html
-│   ├── project2.html
-│   ├── project3.html
-│   └── public
-│       ├── images
-│       │   ├── GMNI.jpg
-│       │   ├── GNS3.png
-│       │   ├── gunung.png
-│       │   ├── porto-1.png
-│       │   ├── PP-FB.jpg
-│       │   ├── radar.jpg
-│       │   └── server.png
-│       └── js
-│           └── main.js
-└── nginx
-    └── default.conf
 
+├── docker-compose.yml
+
+├── Dockerfile
+
+├── frontend
+
+│   ├── index.html
+
+│   ├── package-lock.json
+
+│   ├── project1.html
+
+│   ├── project2.html
+
+│   ├── project3.html
+
+│   └── public
+
+│       ├── images
+
+│       │   ├── GMNI.jpg
+
+│       │   ├── GNS3.png
+
+│       │   ├── gunung.png
+
+│       │   ├── porto-1.png
+
+│       │   ├── PP-FB.jpg
+
+│       │   ├── radar.jpg
+
+│       │   └── server.png
+
+│       └── js
+
+│           └── main.js
+
+└── nginx
+
+    └── default.conf
 
 ---
 
